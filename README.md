@@ -1,16 +1,47 @@
-# Astro Starter Kit: Basics
+# Logical Sistemas Landing Page
 
-```sh
-npm create astro@latest -- --template basics
+Este proyecto es una landing page para [Logical Sistemas](https://www.logicalsistemas.com/).
+
+## 🧰 Tecnologías
+
+- [Astro](https://docs.astro.build/en/getting-started/): Un framework de construcción de sitios web rápido y moderno.
+- [Tailwind CSS](https://tailwindcss.com/docs/installation): Un marco de diseño CSS de utilidad de bajo nivel.
+
+## 📒Requisitos
+
+[Node](https://nodejs.org/en) versión 18 +
+
+## 💻  Descarga y ejecución local
+
+1. Clona este repositorio en tu máquina local:
+
+    ```bash
+    git clone https://github.com/andrextor/logical-sistemas-landing-page.git
+    ```
+
+2. Navega al directorio del proyecto:
+
+    ```bash
+    cd logical-sistemas-landing-page
+    ```
+
+3. Instala las dependencias del proyecto:
+
+    ```bash
+    npm install
+    ```
+
+4. Inicia la aplicación:
+
+    ```bash
+    npm start
+    ```
+
+5. Abre tu navegador y visita la siguiente URL:
+
+```url
+    http://localhost:4321/
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
 ## 🚀 Project Structure
 
@@ -22,7 +53,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── CardService.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
@@ -30,15 +61,15 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro busca archivos .astro o .md en el directorio src/pages/. Cada página se expone como una ruta basada en el nombre de su archivo.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+No hay nada especial en src/components/, pero es ahí donde nos gusta colocar cualquier componente de Astro/React/Vue/Svelte/Preact.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Cualquier activo estático, como imágenes, puede colocarse en el directorio public/."
 
-## 🧞 Commands
+## 🧞 Comandos
 
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -49,6 +80,10 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Contribuciones
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Si encuentras algún problema o tienes sugerencias para mejorar el proyecto, siéntete libre de abrir un issue o enviar un pull request.
+
+## Licencia
+
+Este proyecto está bajo la licencia [MIT](LICENSE).
