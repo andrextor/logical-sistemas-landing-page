@@ -1,0 +1,43 @@
+---
+import CardServices from "./CardService.astro"
+const services = [
+  {
+    title: "Desarrollo de software",
+    description: "r sit amet consectetur adipi",
+    icon: "config",
+  },
+  {
+    title: "Aplicaciones Web",
+    description: "dsadsadsadasr sit amet consectetur adipi",
+    icon: "web",
+  },
+  {
+    title: "Aplicaciones Moviles",
+    description: "r sit amet consectetur adipi",
+    icon: "Mobile",
+  },
+]
+---
+
+<section
+  id='services'
+  class='flex flex-col px-4 md:py-16 gap-y-4 border-solid border-2 border-blue-300'
+>
+  <h1 class='text-md text-red-700'>Nuestros servicios</h1>
+  <p>
+    <span class='text-2xl font-thin'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, corrupti?
+    </span>
+    <span class='text-3xl underline underline-offset-3 decoration-red-400'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, facilis.
+    </span>
+  </p>
+
+  <div class='grid grid-flow-col gap-4 justify-items-center md:pt-10'>
+    {
+      services.map(({ title, description, icon }) => (
+        <CardServices title={title} description={description} svg={icon} />
+      ))
+    }
+  </div>
+</section>
