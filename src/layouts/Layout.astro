@@ -10,6 +10,7 @@ import Services from "../components/Services.astro"
 import Solutions from "../components/Solutions.astro"
 import Customers from "../components/Customers.astro"
 import Footer from "../components/Footer.astro"
+import FloatingButton from "../components/FloatingButton.astro"
 ---
 
 <!doctype html>
@@ -33,17 +34,18 @@ import Footer from "../components/Footer.astro"
       <Solutions />
       <Customers />
       <Footer />
+      <FloatingButton />
     </main>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const links = document.querySelectorAll('a[href^="#"]')
+      window.document.addEventListener("DOMContentLoaded", function () {
+        const links = window.document.querySelectorAll('a[href^="#"]')
 
         links.forEach((link) => {
           link.addEventListener("click", function (e) {
             e.preventDefault()
 
             const targetId = (e.target as HTMLAnchorElement).hash.substring(1)
-            const targetElement = document.getElementById(targetId)
+            const targetElement = window.document.getElementById(targetId)
 
             if (targetElement) {
               const offsetTop = targetElement.offsetTop

@@ -1,10 +1,9 @@
----
-
----
-
-<header class="md:px-12 bg-cover bg-center" style='background-image: url(./images/logical_hero.png)'>
+<header
+  class='md:px-12 bg-cover bg-center'
+  style='background-image: url(./images/logical_hero.png)'
+>
   <nav
-    class='flex items-center max-md:flex-col md:flex-row sm:justify-center md:justify-between text-center bg-transparent md:py-4 text-white dark:text-gray-700 justify-items-center'
+    class='flex items-center max-md:flex-col md:flex-row sm:justify-center md:justify-between text-center bg-transparent md:py-4 text-gray-700 dark:text-white justify-items-center'
   >
     <div class='flex max-md:flex-col'>
       <img
@@ -20,16 +19,21 @@
       </ul>
     </div>
 
-    <a class='sm:pr-0 md:pr-12' href='#contact'> contactacnos</a>
+    <a
+      class='px-4 py-2 text-sm xs:text-xs font-normal bg-red-700 border border-red-700'
+      href='#contact'
+    >
+      Contactac con nosotros</a
+    >
   </nav>
   <div
-    class='flex flex-col sm:w-full gap-y-4 md:w-4/6 lg:w-7/12 py-16 text-cyan-80 text-white dark:text-gray-700'
+    class='flex flex-col sm:w-full gap-y-4 md:w-4/6 lg:w-7/12 py-16 text-gray-700 dark:text-white'
   >
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, ducimus.
     </p>
 
-    <h1 class='text-4xl'>Lorem ipsum dolor sit amet.</h1>
+    <h1 class='text-6xl'>Lorem ipsum dolor sit amet.</h1>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique
@@ -38,9 +42,17 @@
       ut doloremque.
     </p>
 
-    <div>
-      <button>botón 1</button>
-      <button>botón 2</button>
+    <div class='pt-12'>
+      <a
+        href='#services'
+        class='px-4 py-2 text-sm font-normal bg-transparent border border-white'
+        >Explora nuestros servicios</a
+      >
+      <a
+        href='#contact'
+        class='px-4 py-2 text-sm font-normal bg-red-700 border border-red-700'
+        >Contacta con Nosotros</a
+      >
     </div>
   </div>
 </header>
