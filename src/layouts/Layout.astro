@@ -3,28 +3,6 @@ interface Props {
   title: string
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll('a[href^="#"]')
-
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault()
-
-      const targetId = (e.target as HTMLAnchorElement).hash.substring(1)
-      const targetElement = document.getElementById(targetId)
-
-      if (targetElement) {
-        const offsetTop = targetElement.offsetTop
-
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        })
-      }
-    })
-  })
-})
-
 const { title } = Astro.props
 import { ViewTransitions } from "astro:transitions"
 import Header from "../components/Header.astro"
@@ -56,5 +34,28 @@ import Footer from "../components/Footer.astro"
       <Customers />
       <Footer />
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]')
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault()
+
+            const targetId = (e.target as HTMLAnchorElement).hash.substring(1)
+            const targetElement = document.getElementById(targetId)
+
+            if (targetElement) {
+              const offsetTop = targetElement.offsetTop
+
+              window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth",
+              })
+            }
+          })
+        })
+      })
+    </script>
   </body>
 </html>
