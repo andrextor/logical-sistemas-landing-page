@@ -4,48 +4,60 @@ interface Props {
 }
 
 const { title } = Astro.props
+import { ViewTransitions } from "astro:transitions"
+import Header from "../components/Header.astro"
+import Services from "../components/Services.astro"
+import Solutions from "../components/Solutions.astro"
+import Customers from "../components/Customers.astro"
+import Footer from "../components/Footer.astro"
+import FloatingButton from "../components/FloatingButton.astro"
 ---
 
 <!doctype html>
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
+    <meta
+      name='description'
+      content='Ofrecemos servicios de desarrollo de aplicaciones personalizadas para satisfacer las necesidades de tu empresa. Contacta con nosotros para soluciones innovadoras y eficientes.'
+    />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.icon' />
+    <link rel='icon' type='image/svg+xml' href='./favicon.ico' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
-  <body>
-    <slot />
+  <body class='container mx-auto bg-transparent'>
+    <Header />
+    <main>
+      <Services transition:name='hero' />
+      <Solutions />
+      <Customers />
+      <Footer />
+      <FloatingButton />
+    </main>
+    <script>
+      window.document.addEventListener("DOMContentLoaded", function () {
+        const links = window.document.querySelectorAll('a[href^="#"]')
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault()
+
+            const targetId = (e.target as HTMLAnchorElement).hash.substring(1)
+            const targetElement = window.document.getElementById(targetId)
+
+            if (targetElement) {
+              const offsetTop = targetElement.offsetTop
+
+              window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth",
+              })
+            }
+          })
+        })
+      })
+    </script>
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>

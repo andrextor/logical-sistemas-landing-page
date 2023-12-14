@@ -1,0 +1,51 @@
+---
+import CardServices from "./CardService.astro"
+const services = [
+  {
+    title: "Desarrollo de software",
+    description:
+      "Innovamos con responsabilidad. Entregamos soluciones de software de calidad, a tiempo.",
+    icon: "config",
+  },
+  {
+    title: "Aplicaciones Web",
+    description:
+      "Productividad y precisión. Creamos aplicaciones web a medida, puntualmente.",
+    icon: "web",
+  },
+  {
+    title: "Aplicaciones Móviles",
+    description:
+      "Responsabilidad en cada línea de código. Desarrollamos apps móviles eficientes.",
+    icon: "Mobile",
+  },
+]
+---
+
+<section
+  id='services'
+  class='flex flex-col py-8 px-4 md:px-12 md:py-16 gap-y-4'
+>
+  <h5 class='text-center text-md text-red-700'>Nuestros servicios</h5>
+  <p class='md:pl-8'>
+    <span class='text-sm md:text-2xl font-thin'>
+      Desarrollamos software y aplicaciones web y móviles a medida
+    </span>
+    <span
+      class='text-lg md:text-5xl underline underline-offset-3 decoration-red-400'
+    >
+      Transformamos tus ideas en soluciones digitales impactantes para impulsar
+      tu éxito en línea.
+    </span>
+  </p>
+
+  <div
+    class='grid grid-flow-row md:grid-flow-col gap-4 justify-items-center md:pt-10'
+  >
+    {
+      services.map(({ title, description, icon }) => (
+        <CardServices title={title} description={description} svg={icon} />
+      ))
+    }
+  </div>
+</section>
