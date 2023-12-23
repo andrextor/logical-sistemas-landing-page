@@ -37,15 +37,15 @@ import FloatingButton from "../components/FloatingButton.astro"
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class='container mx-auto bg-transparent'>
+  <body class='container mx-auto bg-transparent dark:bg-black'>
     <Header />
     <main>
       <Services transition:name='hero' />
       <Solutions />
       <Customers />
-      <Footer />
       <FloatingButton />
     </main>
+    <Footer />
     <script>
       window.document.addEventListener("DOMContentLoaded", function () {
         const links = window.document.querySelectorAll('a[href^="#"]')
