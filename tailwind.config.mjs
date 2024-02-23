@@ -5,6 +5,9 @@ export default {
 		extend: {
 			backgroundImage: {
 				'hero-pattern': "url('./images/logical_hero.webp')",
+			},
+			colors: {
+				principal: '#b91c1c'
 			}
 		},
 	},
