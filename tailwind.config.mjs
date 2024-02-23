@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'hero-pattern': "url('./images/logical_hero.webp')",
-				'rectangle': "url('./images/rectangle.webp')",
+				'hero-pattern': "url('/images/logical_hero.webp')",
+				'rectangle': "url('/images/rectangle.webp')",
 			},
 			colors: {
 				principal: '#b91c1c',
