@@ -7,7 +7,8 @@ export default {
 				'hero-pattern': "url('./images/logical_hero.webp')",
 			},
 			colors: {
-				principal: '#b91c1c'
+				principal: '#b91c1c',
+				secondary: '#F3F3F3'
 			}
 		},
 	},
