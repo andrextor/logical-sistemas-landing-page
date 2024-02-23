@@ -9,7 +9,9 @@ export default {
 			},
 			colors: {
 				principal: '#b91c1c',
-				secondary: '#F3F3F3'
+				secondary: '#F3F3F3',
+				principalDark: '#0D0D0D',
+				secondaryDark: '#181818',
 			}
 		},
 	},
