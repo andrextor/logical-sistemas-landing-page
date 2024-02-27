@@ -1,3 +1,6 @@
+---
+import ContactButton from "../components/ContactButton.astro"
+---
 <header class='bg-hero-pattern md:bg-cover md:bg-center lg:h-[700px]'>
   <nav
     class='flex top-0 w-full px-6 py-4 md:z-50 md:fixed  md:backdrop-blur-sm items-center md:px-12 max-md:flex-col md:flex-row sm:justify-center md:justify-between text-center bg-transparent md:py-4 text-white justify-items-center lg:text-lg'
@@ -16,26 +19,21 @@
       </ul>
     </div>
 
-    <a
-      class='rounded-sm px-4 py-3 mt-8 md:mt-0 text-sm xs:text-xs font-normal bg-principal border border-principal'
-      href='#contact'
-    >
-      Contacta con nosotros</a
-    >
+    <ContactButton/>
   </nav>
   <div
     class='flex flex-col text-center md:text-start py-8 px-4 md:px-8 md:py-16 md:mx-24 sm:w-full gap-y-4 lg:ps-0 md:w-4/6 lg:w-7/12 text-white'
   >
-    <p class="md:mt-10" >Transformando Ideas en Innovación Digital</p>
+    <p class="md:mt-20" >Transformando Ideas en Innovación Digital</p>
 
     <h1 class='text-4xl md:text-6xl text-principal/90 font-semibold'>
       Diseño y Desarrollo Web
     </h1>
 
-    <p class='text-pretty text-lg text-red'>
+    <p class='text-pretty md:text-xl md:max-w-3xl'>
       Exploramos el potencial ilimitado de la tecnología para crear experiencias
-      únicas y transformadoras. Nuestro enfoque va más allá del desarrollo
-      convencional, desafiando los límites digitales para moldear un futuro
+      únicas y transformadoras. <span class="font-bold">Nuestro enfoque va más allá del desarrollo
+      convencional</span>, desafiando los límites digitales para moldear un futuro
       conectado. Descubre cómo damos vida a las visiones, creando oportunidades
       e impacto duradero en el mundo digital actual.
     </p>
